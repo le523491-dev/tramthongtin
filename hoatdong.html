@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoạt động | CLB Trạm Thông Tin</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Hiệu ứng cho các thẻ hoạt động */
+        .card-container .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(217, 79, 135, 0.12);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-container .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(217, 79, 135, 0.25);
+        }
+
+        /* Ảnh hoạt động */
+        .activity-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            margin-top: 15px;
+            transition: transform 0.4s ease;
+        }
+
+        .card-container .card:hover .activity-img {
+            transform: scale(1.04);
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CLB TRẠM THÔNG TIN</h1>
+    <p>Đưa tin bằng tâm, lan tỏa bằng tầm!</p>
+</header>
+
+<nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="gioithieu.html">Giới thiệu</a>
+    <a href="thanhvien.html">Thành viên</a>
+    <a href="noiquy.html">Nội quy</a>
+    <a href="hoatdong.html" class="active">Hoạt động</a>
+    <a href="lich.html">Lịch sinh hoạt</a>
+    <a href="dangky.html">Đăng ký</a>
+</nav>
+
+<div class="page-title">
+    <h2>Hoạt động nổi bật</h2>
+    <p>Mỗi hoạt động là một cơ hội để học hỏi và trưởng thành.</p>
+</div>
+
+<main class="content">
+    <div class="card-container">
+
+        <div class="card">
+            <h3>📰 Đưa tin sự kiện học đường</h3>
+            <p>Ghi lại những sự kiện nổi bật, cập nhật tin tức và lan tỏa các hoạt động đáng nhớ của trường.</p>
+
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqoYQUJ2_ch3_FCS-o6FRkv08gVm3HXT_2wigEy-ozuhL2CLE83-jLuA41&s=10"
+                alt="Đưa tin sự kiện học đường"
+                class="activity-img">
+        </div>
+
+        <div class="card">
+            <h3>✍️ Sáng tạo nội dung</h3>
+            <p>Lên ý tưởng, viết bài, phỏng vấn và xây dựng những sản phẩm truyền thông gần gũi với học sinh.</p>
+
+            <img
+                src="https://wp-cms-media.s3.ap-east-1.amazonaws.com/mceclip8_99a4f29da7.jpg"
+                alt="Sáng tạo nội dung"
+                class="activity-img">
+        </div>
+
+        <div class="card">
+            <h3>🤝 Hoạt động nhóm</h3>
+            <p>Rèn luyện kỹ năng hợp tác, giao tiếp và giải quyết vấn đề thông qua các thử thách tập thể.</p>
+
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYjhWoWHMA92VgCkg7A47cOdW6mkwEIDZyTPZ57mAivA&s=10"
+                alt="Hoạt động nhóm"
+                class="activity-img">
+        </div>
+
+        <div class="card">
+            <h3>🌷 Chương trình cộng đồng</h3>
+            <p>Tham gia hoạt động tình nguyện, chia sẻ yêu thương và lan tỏa những giá trị tích cực.</p>
+
+            <img
+                src="https://eript.ptit.edu.vn/wp-content/uploads/image-9-9-1024x563-1.jpg"
+                alt="Chương trình cộng đồng"
+                class="activity-img">
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <p><strong>CLB TRẠM THÔNG TIN</strong></p>
+    <p>Kết nối thông tin, lan tỏa giá trị</p>
+    <p>Email: tramthongtinthpthongai@gmail.com</p>
+    <p>© 2026 CLB Trạm Thông Tin</p>
+</footer>
+
+<script>
+    const sparkleSymbols = ["✦", "✧", "✨", "⋆"];
+
+    function createSparkle() {
+        const sparkle = document.createElement("span");
+
+        sparkle.className = "sparkle";
+        sparkle.textContent =
+            sparkleSymbols[Math.floor(Math.random() * sparkleSymbols.length)];
+
+        sparkle.style.left = Math.random() * 100 + "vw";
+        sparkle.style.fontSize = (10 + Math.random() * 12) + "px";
+        sparkle.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+        document.body.appendChild(sparkle);
+
+        setTimeout(() => {
+            sparkle.remove();
+        }, 8000);
+    }
+
+    setInterval(createSparkle, 450);
+</script>
+
+</body>
+</html>

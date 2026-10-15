@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ | CLB Trạm Thông Tin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>CLB TRẠM THÔNG TIN</h1>
+    <p>Đưa tin bằng tâm, lan tỏa bằng tầm!</p>
+</header>
+
+<nav>
+    <a href="index.html" class="active">Trang chủ</a>
+    <a href="gioithieu.html">Giới thiệu</a>
+    <a href="thanhvien.html">Thành viên</a>
+    <a href="noiquy.html">Nội quy</a>
+    <a href="hoatdong.html">Hoạt động</a>
+    <a href="lich.html">Lịch sinh hoạt</a>
+    <a href="dangky.html">Đăng ký</a>
+</nav>
+
+<main class="banner">
+    <h2>Chào mừng đến với CLB Trạm Thông Tin</h2>
+
+    <p>
+        Cùng khám phá những câu chuyện mới, cập nhật thông tin
+        và lan tỏa những giá trị tích cực qua từng trang viết.
+    </p>
+
+    <p>
+        Nơi dành cho những bạn trẻ yêu thích viết lách,
+        sáng tạo nội dung và khám phá cuộc sống học đường.
+    </p>
+
+    <a href="gioithieu.html" class="button">
+        Khám phá câu lạc bộ
+    </a>
+</main>
+
+<footer>
+    <p><strong>CLB TRẠM THÔNG TIN</strong></p>
+    <p>Kết nối thông tin, lan tỏa giá trị</p>
+    <p>Email: tramthongtinthpthongai@gmail.com</p>
+    <p>© 2026 CLB Trạm Thông Tin</p>
+</footer>
+
+</body>
+</html>
+
+<script>
+    const sparkleSymbols = ["✦", "✧", "✨", "⋆"];
+
+    function createSparkle() {
+        const sparkle = document.createElement("span");
+
+        sparkle.className = "sparkle";
+        sparkle.textContent =
+            sparkleSymbols[Math.floor(Math.random() * sparkleSymbols.length)];
+
+        sparkle.style.left = Math.random() * 100 + "vw";
+        sparkle.style.fontSize = (10 + Math.random() * 12) + "px";
+        sparkle.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+        document.body.appendChild(sparkle);
+
+        setTimeout(() => {
+            sparkle.remove();
+        }, 8000);
+    }
+
+    setInterval(createSparkle, 450);
+</script>
+</body>

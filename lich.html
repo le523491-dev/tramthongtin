@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch sinh hoạt | CLB Trạm Thông Tin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>CLB TRẠM THÔNG TIN</h1>
+    <p>Đưa tin bằng tâm, lan tỏa bằng tầm!</p>
+</header>
+
+<nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="gioithieu.html">Giới thiệu</a>
+    <a href="thanhvien.html">Thành viên</a>
+    <a href="noiquy.html">Nội quy</a>
+    <a href="hoatdong.html">Hoạt động</a>
+    <a href="lich.html" class="active">Lịch sinh hoạt</a>
+    <a href="dangky.html">Đăng ký</a>
+</nav>
+
+<div class="page-title">
+    <h2>Lịch sinh hoạt</h2>
+    <p>Lên kế hoạch, kết nối và cùng nhau hoàn thành mục tiêu.</p>
+</div>
+
+<main class="content">
+    <h2>Lịch hoạt động hằng tuần</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Thời gian</th>
+                <th>Nội dung</th>
+                <th>Địa điểm</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Thứ Hai: 16h30–17h30</td>
+                <td>Thảo luận ý tưởng</td>
+                <td>Phòng sinh hoạt CLB</td>
+            </tr>
+            <tr>
+                <td>Thứ Tư: 16h30–17h30</td>
+                <td>Làm việc nhóm</td>
+                <td>Phòng học</td>
+            </tr>
+            <tr>
+                <td>Thứ Sáu: 16h30–17h30</td>
+                <td>Chia sẻ và tổng kết</td>
+                <td>Phòng sinh hoạt CLB</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p style="text-align: center; margin-top: 20px;">
+        * Lịch sinh hoạt có thể được điều chỉnh tùy theo kế hoạch của CLB.
+    </p>
+</main>
+
+<footer>
+    <p><strong>CLB TRẠM THÔNG TIN</strong></p>
+    <p>Kết nối thông tin, lan tỏa giá trị</p>
+    <p>Email: tramthongtinthpthongai@gmail.com</p>
+    <p>© 2026 CLB Trạm Thông Tin</p>
+</footer>
+
+</body>
+</html>
+
+<script>
+    const sparkleSymbols = ["✦", "✧", "✨", "⋆"];
+
+    function createSparkle() {
+        const sparkle = document.createElement("span");
+
+        sparkle.className = "sparkle";
+        sparkle.textContent =
+            sparkleSymbols[Math.floor(Math.random() * sparkleSymbols.length)];
+
+        sparkle.style.left = Math.random() * 100 + "vw";
+        sparkle.style.fontSize = (10 + Math.random() * 12) + "px";
+        sparkle.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+        document.body.appendChild(sparkle);
+
+        setTimeout(() => {
+            sparkle.remove();
+        }, 8000);
+    }
+
+    setInterval(createSparkle, 450);
+</script>
+</body>

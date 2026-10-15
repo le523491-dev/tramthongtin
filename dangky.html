@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký CLB Trạm Thông Tin</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5;
+            color: #5c3045;
+        }
+
+        .content {
+            display: block;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            text-align: center;
+            color: #d94f87;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e8b4ca;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 15px;
+            background-color: #fffafd;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background-color: #e86b9a;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #d94f87;
+        }
+
+        .success-message {
+            color: #27834a;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    
+</header>
+    <section class="content">
+        <h2>Đăng ký tham gia CLB</h2>
+        <p>Điền thông tin bên dưới để đăng ký nhé!</p>
+
+        <form id="registrationForm">
+            <label for="fullname">Họ và tên:</label>
+            <input type="text" id="fullname"
+                   placeholder="Nhập họ và tên" required>
+
+            <label for="class">Lớp:</label>
+            <input type="text" id="class"
+                   placeholder="Ví dụ: 12A1" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email"
+                   placeholder="Nhập email" required>
+
+            <label for="interest">Lĩnh vực quan tâm:</label>
+            <select id="interest" required>
+                <option value="">-- Chọn lĩnh vực --</option>
+                <option value="Nội dung">Nội dung</option>
+                <option value="Truyền thông">Truyền thông</option>
+                <option value="Tổ chức sự kiện">Tổ chức sự kiện</option>
+            </select>
+
+            <label for="reason">Lý do muốn tham gia:</label>
+            <textarea id="reason"
+                      placeholder="Chia sẻ lý do của bạn..."
+                      required></textarea>
+
+            <button type="submit">Gửi đăng ký</button>
+
+            <p id="successMessage" class="success-message"
+               role="status" aria-live="polite"></p>
+        </form>
+    </section>
+
+    <script>
+        const form = document.getElementById("registrationForm");
+        const message = document.getElementById("successMessage");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            message.textContent =
+                "🎉 Đăng ký thành công! Cảm ơn bạn đã quan tâm đến CLB Trạm Thông Tin.";
+
+            form.reset();
+        });
+    </script>
+</body>
+</html>

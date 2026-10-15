@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thành viên | CLB Trạm Thông Tin</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .member-card a {
+            display: inline-block;
+            margin: 0 0 15px;
+            color: #d94f87;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .member-card a:hover {
+            color: #b8326c;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CLB TRẠM THÔNG TIN</h1>
+    <p>Đưa tin bằng tâm, lan tỏa bằng tầm!</p>
+</header>
+
+<nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="gioithieu.html">Giới thiệu</a>
+    <a href="thanhvien.html" class="active">Thành viên</a>
+    <a href="noiquy.html">Nội quy</a>
+    <a href="hoatdong.html">Hoạt động</a>
+    <a href="lich.html">Lịch sinh hoạt</a>
+    <a href="dangky.html">Đăng ký</a>
+</nav>
+
+<div class="page-title">
+    <h2>Thành viên câu lạc bộ</h2>
+    <p>Gặp gỡ những gương mặt đứng sau Trạm Thông Tin.</p>
+</div>
+
+<main class="content">
+    <div class="card-container">
+
+        <!-- Thành viên 1 -->
+        <div class="member-card">
+            <img src="https://i.pinimg.com/736x/b4/01/d6/b401d6aa59eacc0019edcc93a7da8df7.jpg"
+                 alt="Ảnh Lê Ngọc Anh">
+
+            <h3>Lê Ngọc Anh</h3>
+            <p><strong>Chủ nhiệm CLB</strong></p>
+            <p>Định hướng hoạt động, quản lý nội dung và dẫn dắt các thành viên.</p>
+
+            <p><strong>🎓 Đại học mơ ước:</strong></p>
+            <a href="https://www.yonsei.ac.kr/"
+               target="_blank" rel="noopener noreferrer">
+                Yonsei University
+            </a>
+        </div>
+
+        <!-- Thành viên 2 -->
+        <div class="member-card">
+            <img src="https://i.pinimg.com/736x/cd/ad/c2/cdadc28db9ecf17341ee25be95becf61.jpg"
+                 alt="Ảnh Phạm Ngọc Huyền">
+
+            <h3>Phạm Ngọc Huyền</h3>
+            <p><strong>Phó chủ nhiệm - Nội dung</strong></p>
+            <p>Xây dựng ý tưởng, định hướng nội dung và kiểm duyệt bài viết.</p>
+
+            <p><strong>🎓 Đại học mơ ước:</strong></p>
+            <a href="https://www.stanford.edu/"
+               target="_blank" rel="noopener noreferrer">
+                Stanford University
+            </a>
+        </div>
+
+        <!-- Thành viên 3 -->
+        <div class="member-card">
+            <img src="https://i.pinimg.com/736x/19/08/b6/1908b6dcbe555a3f9f81aff5f3b2c4df.jpg"
+                 alt="Ảnh Phương Thảo Vy">
+
+            <h3>Phương Thảo Vy</h3>
+            <p><strong>Phó chủ nhiệm - Hoạt động và truyền thông</strong></p>
+            <p>Tổ chức hoạt động và triển khai các sản phẩm truyền thông.</p>
+
+            <p><strong>🎓 Đại học mơ ước:</strong></p>
+            <a href="https://www.tsinghua.edu.cn/en/"
+               target="_blank" rel="noopener noreferrer">
+                Tsing Hua University
+            </a>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <p><strong>CLB TRẠM THÔNG TIN</strong></p>
+    <p>Kết nối thông tin, lan tỏa giá trị</p>
+    <p>Email: tramthongtinthpthongai@gmail.com</p>
+    <p>© 2026 CLB Trạm Thông Tin</p>
+</footer>
+
+<script>
+    const sparkleSymbols = ["✦", "✧", "✨", "⋆"];
+
+    function createSparkle() {
+        const sparkle = document.createElement("span");
+
+        sparkle.className = "sparkle";
+        sparkle.textContent =
+            sparkleSymbols[Math.floor(Math.random() * sparkleSymbols.length)];
+
+        sparkle.style.left = Math.random() * 100 + "vw";
+        sparkle.style.fontSize = (10 + Math.random() * 12) + "px";
+        sparkle.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+        document.body.appendChild(sparkle);
+
+        setTimeout(() => {
+            sparkle.remove();
+        }, 8000);
+    }
+
+    setInterval(createSparkle, 450);
+</script>
+
+</body>
+</html>

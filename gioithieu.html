@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu | CLB Trạm Thông Tin</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS trang trí cho ảnh giới thiệu */
+        .about-image-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .about-img {
+            width: 100%;
+            max-height: 480px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s ease;
+        }
+
+        .about-img:hover {
+            transform: scale(1.01);
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CLB TRẠM THÔNG TIN</h1>
+    <p>Đưa tin bằng tâm, lan tỏa bằng tầm!</p>
+</header>
+
+<nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="gioithieu.html" class="active">Giới thiệu</a>
+    <a href="thanhvien.html">Thành viên</a>
+    <a href="noiquy.html">Nội quy</a>
+    <a href="hoatdong.html">Hoạt động</a>
+    <a href="lich.html">Lịch sinh hoạt</a>
+    <a href="dangky.html">Đăng ký</a>
+</nav>
+
+<div class="page-title">
+    <h2>Giới thiệu câu lạc bộ</h2>
+    <p>Khám phá câu chuyện và sứ mệnh của Trạm Thông Tin.</p>
+</div>
+
+<main class="content">
+    <h2>Chúng mình là ai?</h2>
+
+    <p>
+        CLB Báo chí – Trạm Thông Tin là nơi học sinh giao lưu,
+        học hỏi và khám phá thế giới báo chí, truyền thông
+        thông qua những câu chuyện và ý tưởng sáng tạo.
+    </p>
+
+    <p>
+        Câu lạc bộ hướng đến việc phát triển kỹ năng viết lách,
+        thu thập thông tin, sáng tạo nội dung, giao tiếp
+        và làm việc nhóm.
+    </p>
+
+    <p>
+        Chúng mình tin rằng mỗi thành viên đều có góc nhìn
+        và tiếng nói riêng, góp phần tạo nên những câu chuyện
+        ý nghĩa và lan tỏa giá trị tích cực đến cộng đồng học đường.
+    </p>
+
+    <!-- Ảnh lớn được chèn ngay dưới phần "Chúng mình là ai?" -->
+    <div class="about-image-container">
+        <img src="https://thanhnien.mediacdn.vn/Uploaded/ngoclong/2022_11_19/clb-nhiep-anh-sinh-hoat-1835.jpg" alt="Hoạt động của CLB Trạm Thông Tin" class="about-img">
+        <p class="image-caption">Hình ảnh hoạt động và giao lưu tác nghiệp của các thành viên CLB 📸</p>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <h3>✍️ Sáng tạo</h3>
+            <p>Phát triển ý tưởng và tạo ra những nội dung mới mẻ.</p>
+        </div>
+
+        <div class="card">
+            <h3>📰 Truyền thông</h3>
+            <p>Chia sẻ thông tin chính xác và những câu chuyện ý nghĩa.</p>
+        </div>
+
+        <div class="card">
+            <h3>🤝 Kết nối</h3>
+            <p>Cùng học hỏi, hợp tác và phát triển kỹ năng.</p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p><strong>CLB TRẠM THÔNG TIN</strong></p>
+    <p>Kết nối thông tin, lan tỏa giá trị</p>
+    <p>Email: tramthongtinthpthongai@gmail.com</p>
+    <p>© 2026 CLB Trạm Thông Tin</p>
+</footer>
+
+<script>
+    const sparkleSymbols = ["✦", "✧", "✨", "⋆"];
+
+    function createSparkle() {
+        const sparkle = document.createElement("span");
+
+        sparkle.className = "sparkle";
+        sparkle.textContent =
+            sparkleSymbols[Math.floor(Math.random() * sparkleSymbols.length)];
+
+        sparkle.style.left = Math.random() * 100 + "vw";
+        sparkle.style.fontSize = (10 + Math.random() * 12) + "px";
+        sparkle.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+        document.body.appendChild(sparkle);
+
+        setTimeout(() => {
+            sparkle.remove();
+        }, 8000);
+    }
+
+    setInterval(createSparkle, 450);
+</script>
+
+</body>
+</html>

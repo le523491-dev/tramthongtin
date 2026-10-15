@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nội quy | CLB Trạm Thông Tin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>CLB TRẠM THÔNG TIN</h1>
+    <p>Đưa tin bằng tâm, lan tỏa bằng tầm!</p>
+</header>
+
+<nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="gioithieu.html">Giới thiệu</a>
+    <a href="thanhvien.html">Thành viên</a>
+    <a href="noiquy.html" class="active">Nội quy</a>
+    <a href="hoatdong.html">Hoạt động</a>
+    <a href="lich.html">Lịch sinh hoạt</a>
+    <a href="dangky.html">Đăng ký</a>
+</nav>
+
+<div class="page-title">
+    <h2>📋 Nội quy câu lạc bộ</h2>
+    <p>Cùng xây dựng một môi trường sáng tạo, văn minh và trách nhiệm.</p>
+</div>
+
+<main class="content">
+    <div class="card-container">
+
+        <div class="card">
+            <h3>01. Tôn trọng và đoàn kết</h3>
+            <p>Tôn trọng ý kiến, hỗ trợ và hợp tác với các thành viên.</p>
+        </div>
+
+        <div class="card">
+            <h3>02. Có trách nhiệm</h3>
+            <p>Hoàn thành nhiệm vụ được giao và tham gia sinh hoạt đúng giờ.</p>
+        </div>
+
+        <div class="card">
+            <h3>03. Chính xác trong đưa tin</h3>
+            <p>Kiểm chứng thông tin trước khi đăng tải, không lan truyền tin giả.</p>
+        </div>
+
+        <div class="card">
+            <h3>04. Tôn trọng bản quyền</h3>
+            <p>Ghi rõ nguồn tài liệu, hình ảnh và tôn trọng sản phẩm sáng tạo.</p>
+        </div>
+
+        <div class="card">
+            <h3>05. Ứng xử văn minh</h3>
+            <p>Giao tiếp lịch sự, giữ gìn hình ảnh và uy tín của câu lạc bộ.</p>
+        </div>
+
+        <div class="card">
+            <h3>06. Bảo mật thông tin</h3>
+            <p>Không tự ý chia sẻ thông tin cá nhân hoặc hình ảnh của thành viên khi chưa được đồng ý.</p>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <p><strong>CLB TRẠM THÔNG TIN</strong></p>
+    <p>Kết nối thông tin, lan tỏa giá trị</p>
+    <p>Email: tramthongtinthpthongai@gmail.com</p>
+    <p>© 2026 CLB Trạm Thông Tin</p>
+</footer>
+
+</body>
+</html>
+
+<script>
+    const sparkleSymbols = ["✦", "✧", "✨", "⋆"];
+
+    function createSparkle() {
+        const sparkle = document.createElement("span");
+
+        sparkle.className = "sparkle";
+        sparkle.textContent =
+            sparkleSymbols[Math.floor(Math.random() * sparkleSymbols.length)];
+
+        sparkle.style.left = Math.random() * 100 + "vw";
+        sparkle.style.fontSize = (10 + Math.random() * 12) + "px";
+        sparkle.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+        document.body.appendChild(sparkle);
+
+        setTimeout(() => {
+            sparkle.remove();
+        }, 8000);
+    }
+
+    setInterval(createSparkle, 450);
+</script>
+</body>
